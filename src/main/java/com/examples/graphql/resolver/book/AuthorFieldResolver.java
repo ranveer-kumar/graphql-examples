@@ -2,8 +2,8 @@
 //
 //import com.examples.graphql.model.Image;
 //import com.examples.graphql.model.LeadMedia;
-//import com.examples.graphql.model.book.Author;
-//import com.examples.graphql.model.book.Book;
+//import com.examples.graphql.model.Author;
+//import com.examples.graphql.model.Book;
 //import graphql.kickstart.tools.GraphQLResolver;
 //import org.springframework.stereotype.Component;
 //

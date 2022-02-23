@@ -1,4 +1,4 @@
-package com.examples.graphql.model.book;
+package com.examples.graphql.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Author{
-    private String name;
-    private  String city;
+public class Temp {
+    private String metaTitle;
+    private String metaDescription;
+    private String url;
 }

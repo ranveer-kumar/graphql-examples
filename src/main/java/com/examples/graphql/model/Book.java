@@ -1,13 +1,11 @@
-package com.examples.graphql.model.book;
+package com.examples.graphql.model;
 
-import com.examples.graphql.model.MetaData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -37,6 +35,7 @@ public class Book {
     private String headline;
     @NotEmpty
     private String summary;
+    //TODO: Change articleType to enum
     @NotEmpty
     private String articleType;
     private String createdBy;
@@ -68,8 +67,12 @@ public class Book {
 
     @Builder.Default
     private Boolean changesPublished = false;
-//	@Builder.Default
-//	private LeadMedia leadMedia = new LeadMedia();
+	@Builder.Default
+	private LeadMedia leadMedia = new LeadMedia();
+
+    @Builder.Default
+    private Temp temp = new Temp();
+
 }
 
 

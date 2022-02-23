@@ -2,12 +2,12 @@ scalar Date
 type Query {
     getBookById (bookId: ID!): Book
 
-    getArticleById (articleId: ID!): Article
-    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
+#    getArticleById (articleId: ID!): Article
+#    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
 }
 type Mutation{
-    saveArticle(articleInput: ArticleInput!): Article!
-    deleteArticle (articleId: Int! @NotBlank): Boolean
+#    saveArticle(articleInput: ArticleInput!): Article!
+#    deleteArticle (articleId: Int! @NotBlank): Boolean
     saveBook(bookInput: BookInput!): Book!
     #    updateArticle(articleInput: ArticleInput!): Article!
 
@@ -39,9 +39,24 @@ type Book{
     expiryDate: String
     expireAt: String
     changesPublished: Boolean
-#        leadMedia: LeadMedia
+        temp: Temp
+    leadMedia: LeadMedia
 }
-
+type Temp{
+    metaTitle: String
+    metaDescription: String
+    url: String
+#    authors: [String]
+#    authorEmail: String
+#    keywords: [String]
+#    section: String
+#    subSection: String
+#    sectionId: Int
+#    subSectionId: Int
+#    secondarySections: [String]
+#    topic: [String]
+#    canonicalUrl: String
+}
 type Author{
     name: String
     city: String
@@ -73,9 +88,25 @@ input BookInput{
     expiryDate: String
     expireAt: String
     changesPublished: Boolean
-#    leadMedia: LeadMediaInput
+    temp: TempInput
+    leadMedia: LeadMediaInput
 }
 
+input TempInput{
+    metaTitle: String
+    metaDescription: String
+    url: String
+#    authors: [String]
+#    authorEmail: String
+#    keywords: [String]
+#    section: String
+#    subSection: String
+#    sectionId: Int
+#    subSectionId: Int
+#    secondarySections: [String]
+#    topic: [String]
+#    canonicalUrl: String
+}
 input AuthorInput{
     name: String
     city: String

@@ -18,7 +18,7 @@ import lombok.ToString;
 public class MetaData {
 	private String metaTitle;
 	private String metaDescription;
-	@JsonProperty("url")
+//	@JsonProperty("url")
 	private String url;
 	private ArrayList<String> authors;
 	private String authorEmail;

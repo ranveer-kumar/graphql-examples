@@ -1,5 +1,5 @@
 input LeadMediaInput {
-	mediaType: MediaTypeInput
+	mediaType: String
 	images: [ImageInput]
 	videos: [VideoInput]
 }

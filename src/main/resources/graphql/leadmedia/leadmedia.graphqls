@@ -1,5 +1,5 @@
 type LeadMedia{
-    mediaType: MediaType
+    mediaType: String
     images: [Image]
     videos: [Video]
 }
