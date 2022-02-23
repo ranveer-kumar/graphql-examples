@@ -1,0 +1,88 @@
+scalar Date
+type Query {
+    getBookById (bookId: ID!): Book
+
+    getArticleById (articleId: ID!): Article
+    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
+}
+type Mutation{
+    saveArticle(articleInput: ArticleInput!): Article!
+    deleteArticle (articleId: Int! @NotBlank): Boolean
+    saveBook(bookInput: BookInput!): Book!
+#    updateArticle(articleInput: ArticleInput!): Article!
+
+}
+type Book{
+    id: Int
+    domainId: Int
+    author: Author
+    title: String
+
+    headline: String
+    summary: String
+    articleType: String
+    createdBy: String
+    createdDate: String
+    lastModifiedBy: String
+    lastModifiedByUserName: String
+    lastModifiedDate: String
+    lastPublishedBy: String
+    lastPublishedByUserName: String
+    lastPublishedDate: String
+    firstPublishedDate: String
+#    metaData: MetaData
+    scheduledDate: String
+    scheduledAt: String
+    scheduledBy: String
+    isDeleted: Boolean
+    readByUsers: [String]
+    expiryDate: String
+    expireAt: String
+    changesPublished: Boolean
+#    leadMedia: LeadMedia
+#    metaData: MetaData
+}
+
+type Author{
+    name: String
+    city: String
+}
+
+input BookInput{
+    id: Int
+    domainId: Int
+    author: AuthorInput
+    title: String
+    headline: String
+    summary: String
+    articleType: String
+    createdBy: String
+    createdDate: String
+    lastModifiedBy: String
+    lastModifiedByUserName: String
+    lastModifiedDate: String
+    lastPublishedBy: String
+    lastPublishedByUserName: String
+    lastPublishedDate: String
+    firstPublishedDate: String
+    #    metaData: MetaData
+    scheduledDate: String
+    scheduledAt: String
+    scheduledBy: String
+    isDeleted: Boolean
+    readByUsers: [String]
+    expiryDate: String
+    expireAt: String
+    changesPublished: Boolean
+}
+
+input AuthorInput{
+    name: String
+    city: String
+}
+
+
+
+
+
+

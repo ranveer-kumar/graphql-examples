@@ -1,0 +1,26 @@
+
+spring:
+  application:
+    name: spark-cms-backend
+  devtools:
+    restart:
+      enabled: true
+  profiles:
+    active: local
+server:
+  port: 8888
+
+graphql:
+#  extended-scalars: Date
+  servlet:
+    cors:
+      allowed-origins: "*"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/spark-cms
