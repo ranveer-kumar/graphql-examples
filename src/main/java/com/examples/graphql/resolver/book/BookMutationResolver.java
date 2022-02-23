@@ -4,6 +4,7 @@ package com.examples.graphql.resolver.book;
 import com.examples.graphql.exception.NotFoundException;
 import com.examples.graphql.model.Article;
 import com.examples.graphql.model.ArticleInput;
+import com.examples.graphql.model.MetaData;
 import com.examples.graphql.model.book.Author;
 import com.examples.graphql.model.book.Book;
 import com.examples.graphql.model.book.BookInput;
@@ -38,6 +39,10 @@ public class BookMutationResolver implements GraphQLMutationResolver {
         book.setId(bookInput.getId());
         book.setDomainId(bookInput.getDomainId());
         book.setTitle(bookInput.getTitle());
+        book.setMetaData(MetaData.builder()
+                        .metaTitle(bookInput.getMetaData().getMetaTitle())
+                        .authorEmail(bookInput.getMetaData().getAuthorEmail())
+                .build());
         book.setAuthor(Author.builder()
                         .name(bookInput.getAuthor().getName())
                         .city(bookInput.getAuthor().getCity())

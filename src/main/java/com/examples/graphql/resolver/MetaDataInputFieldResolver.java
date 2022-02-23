@@ -7,12 +7,13 @@ import com.examples.graphql.model.MetaDataInput;
 import graphql.kickstart.tools.GraphQLResolver;
 import org.springframework.stereotype.Component;
 
+@Deprecated
 @Component
 public class MetaDataInputFieldResolver implements GraphQLResolver<Article> {
-    public MetaDataInput metaDataInput(ArticleInput article){
-        return MetaDataInput.builder()
-                .authorEmail("abc@a.com")
-                .build();
-    }
+//    public MetaDataInput metaDataInput(ArticleInput article){
+//        return MetaDataInput.builder()
+//                .authorEmail("abc@a.com")
+//                .build();
+//    }
 
 }

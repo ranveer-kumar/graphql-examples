@@ -52,8 +52,8 @@ public class Book {
     private Date lastPublishedDate = new Date();
     @Builder.Default
     private Date firstPublishedDate = new Date();
-//    @Builder.Default
-//    private MetaData metaData = new MetaData();
+    @Builder.Default
+    private MetaData metaData = new MetaData();
     @Builder.Default
     private Date scheduledDate = new Date();
     private Date scheduledAt;
