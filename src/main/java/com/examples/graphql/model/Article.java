@@ -35,9 +35,8 @@ public class Article {
     private String headline;
     @NotEmpty
     private String summary;
-    //TODO: Change articleType to enum
     @NotEmpty
-    private MediaType articleType;
+    private ArticleType articleType;
     private String createdBy;
     @Builder.Default
     private LocalDate createdDate =  LocalDate.now();// = new LocalDate();

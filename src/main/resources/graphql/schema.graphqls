@@ -3,7 +3,7 @@ type Query {
     getArticleById (articleId: ID!): Article
 
 #    getArticleById (articleId: ID!): Article
-#    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
+    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
 }
 type Mutation{
 #    saveArticle(articleInput: ArticleInput!): Article!

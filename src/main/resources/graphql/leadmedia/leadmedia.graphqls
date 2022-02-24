@@ -4,8 +4,3 @@ type LeadMedia{
     videos: [Video]
 }
 
-enum MediaType{
-    ARTICLE
-    GALLERY
-    VIDEO
-}

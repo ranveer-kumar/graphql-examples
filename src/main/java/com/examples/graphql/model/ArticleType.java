@@ -1,7 +1,9 @@
 package com.examples.graphql.model;
 
-public enum MediaType {
+
+public enum ArticleType {
     ARTICLE,
     GALLERY,
     VIDEO
+
 }

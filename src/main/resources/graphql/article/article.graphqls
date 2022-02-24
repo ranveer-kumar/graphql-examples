@@ -4,7 +4,7 @@ type Article{
     title: String
     headline: String
     summary: String
-    articleType: MediaType
+    articleType: ArticleType
     createdBy: String
     createdDate: String
     lastModifiedBy: String
@@ -24,4 +24,10 @@ type Article{
     expireAt: String
     changesPublished: Boolean
     leadMedia: LeadMedia
+}
+
+enum ArticleType{
+    ARTICLE
+    GALLERY
+    VIDEO
 }
