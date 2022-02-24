@@ -2,6 +2,7 @@ package com.examples.graphql.resolver.book;
 
 
 import com.examples.graphql.exception.NotFoundException;
+import com.examples.graphql.model.Article;
 import com.examples.graphql.model.Book;
 import com.examples.graphql.repository.ArticleRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
@@ -18,8 +19,8 @@ public class BookQueryResolver implements GraphQLQueryResolver {
     @Autowired
     ArticleRepository bookRepository;
 
-    public Book getBookById(Long bookId) throws NotFoundException {
-        Optional<Book> articleOptional = bookRepository.findById(bookId);
+    public Article getBookById(Long bookId) throws NotFoundException {
+        Optional<Article> articleOptional = bookRepository.findById(bookId);
         if (articleOptional.isPresent()) {
             return articleOptional.get();
         }

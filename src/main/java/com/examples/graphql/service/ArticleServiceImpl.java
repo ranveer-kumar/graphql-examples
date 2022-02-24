@@ -1,6 +1,6 @@
 package com.examples.graphql.service;
 
-import com.examples.graphql.model.Book;
+import com.examples.graphql.model.Article;
 import com.examples.graphql.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,18 +18,18 @@ public class ArticleServiceImpl implements ArticleService {
 	ArticleRepository articleRepository;
 
 	@Override
-	public Book saveArticle(Book article) {
+	public Article saveArticle(Article article) {
 		return articleRepository.save(article);
 	}
 
 	@Override
-	public Optional<Book> getArticleByID(Long articleId) {
+	public Optional<Article> getArticleByID(Long articleId) {
 		log.debug("Before getArticleByID with articleId {}", articleId);
 		return articleRepository.findById(articleId);
 	}
 
 	@Override
-	public Page<Book> getAllArticles(Pageable pageable) {
+	public Page<Article> getAllArticles(Pageable pageable) {
 		log.debug("Before getAllArticles with pageable parameter");
 		return articleRepository.findAll(pageable);
 	}

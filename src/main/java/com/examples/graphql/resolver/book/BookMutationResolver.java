@@ -1,9 +1,10 @@
 package com.examples.graphql.resolver.book;
 
 
+import com.examples.graphql.model.Article;
+import com.examples.graphql.model.ArticleInput;
 import com.examples.graphql.model.Book;
 import com.examples.graphql.model.BookInput;
-import com.examples.graphql.repository.ArticleRepository;
 import com.examples.graphql.service.ArticleService;
 import com.examples.graphql.util.CommonUtils;
 import graphql.kickstart.tools.GraphQLMutationResolver;
@@ -22,12 +23,10 @@ public class BookMutationResolver implements GraphQLMutationResolver {
     @Autowired
     ArticleService articleService;
 
-    @Autowired
-    ArticleRepository bookRepository;
 
 
-    public Book saveBook(@Valid BookInput bookInput) {
-        Book book = new Book();
+    public Article saveBook(@Valid ArticleInput bookInput) {
+        Article book = new Article();
 //        log.info(articleInput.getMetaData().toString());
         BeanUtils.copyProperties(bookInput, book);
         book.setId((long) new SecureRandom().nextInt(100000));
