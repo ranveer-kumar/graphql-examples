@@ -33,7 +33,7 @@ public class Article {
     private ArticleType articleType;
     private String createdBy;
     @Builder.Default
-    private LocalDate createdDate =  LocalDate.now();// = new LocalDate();
+    private LocalDate createdDate =  LocalDate.now();
     private String lastModifiedBy;
     private String lastModifiedByUserName;
     @Builder.Default

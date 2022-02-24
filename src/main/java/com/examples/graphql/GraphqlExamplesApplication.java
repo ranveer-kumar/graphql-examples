@@ -9,5 +9,4 @@ public class GraphqlExamplesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GraphqlExamplesApplication.class, args);
 	}
-
 }

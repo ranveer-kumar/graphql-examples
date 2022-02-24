@@ -6,8 +6,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class GraphqlExamplesApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+//        assert
+    }
+
+    @Test
+    void getAllArticles() {
+
+//		this.gtl.query("");
+
+    }
 
 }
