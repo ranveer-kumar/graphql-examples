@@ -1,6 +1,6 @@
 scalar Date
 type Query {
-    getArticleById (bookId: ID!): Book
+    getArticleById (bookId: ID!): Article
 
 #    getArticleById (articleId: ID!): Article
 #    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
@@ -8,11 +8,11 @@ type Query {
 type Mutation{
 #    saveArticle(articleInput: ArticleInput!): Article!
 #    deleteArticle (articleId: Int! @NotBlank): Boolean
-    saveArticle(bookInput: BookInput!): Book!
+    saveArticle(bookInput: ArticleInput!): Article!
     #    updateArticle(articleInput: ArticleInput!): Article!
 
 }
-type Book{
+type Article{
     id: Int
     domainId: Int
 #    author: Author
@@ -62,7 +62,7 @@ type Temp{
 #    city: String
 #}
 
-input BookInput{
+input ArticleInput{
     id: Int
     domainId: Int
 #    author: AuthorInput
