@@ -39,24 +39,24 @@ type Article{
     expiryDate: String
     expireAt: String
     changesPublished: Boolean
-        temp: Temp
+#        temp: Temp
     leadMedia: LeadMedia
 }
-type Temp{
-    metaTitle: String
-    metaDescription: String
-    url: String
-#    authors: [String]
-#    authorEmail: String
-#    keywords: [String]
-#    section: String
-#    subSection: String
-#    sectionId: Int
-#    subSectionId: Int
-#    secondarySections: [String]
-#    topic: [String]
-#    canonicalUrl: String
-}
+#type Temp{
+#    metaTitle: String
+#    metaDescription: String
+#    url: String
+##    authors: [String]
+##    authorEmail: String
+##    keywords: [String]
+##    section: String
+##    subSection: String
+##    sectionId: Int
+##    subSectionId: Int
+##    secondarySections: [String]
+##    topic: [String]
+##    canonicalUrl: String
+#}
 #type Author{
 #    name: String
 #    city: String
@@ -88,25 +88,25 @@ input ArticleInput{
     expiryDate: String
     expireAt: String
     changesPublished: Boolean
-    temp: TempInput
+#    temp: TempInput
     leadMedia: LeadMediaInput
 }
 
-input TempInput{
-    metaTitle: String
-    metaDescription: String
-    url: String
-#    authors: [String]
-#    authorEmail: String
-#    keywords: [String]
-#    section: String
-#    subSection: String
-#    sectionId: Int
-#    subSectionId: Int
-#    secondarySections: [String]
-#    topic: [String]
-#    canonicalUrl: String
-}
+#input TempInput{
+#    metaTitle: String
+#    metaDescription: String
+#    url: String
+##    authors: [String]
+##    authorEmail: String
+##    keywords: [String]
+##    section: String
+##    subSection: String
+##    sectionId: Int
+##    subSectionId: Int
+##    secondarySections: [String]
+##    topic: [String]
+##    canonicalUrl: String
+#}
 #input AuthorInput{
 #    name: String
 #    city: String

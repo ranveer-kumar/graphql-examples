@@ -70,8 +70,8 @@ public class Article {
 	@Builder.Default
 	private LeadMedia leadMedia = new LeadMedia();
 
-    @Builder.Default
-    private Temp temp = new Temp();
+//    @Builder.Default
+//    private Temp temp = new Temp();
 
 }
 
