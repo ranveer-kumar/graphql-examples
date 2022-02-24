@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -16,19 +17,12 @@ import java.util.Date;
 @Data
 @Builder
 public class Article {
-//    @Id
-//    private String id;
-//    private String name;
-//    private Author author;
-//    private MetaData metaData;
-
 
     @Id
-//    @Min(value=1, message = "Id must be positive number")
+    @Min(value=1, message = "Id must be positive number")
     private Long id;
-//    @Min(value = 1, message = "Value should be greater then 0")
+    @Min(value = 1, message = "Value should be greater then 0")
     private Integer domainId;
-//    private Author author;
     @NotEmpty
     private String title;
     @NotEmpty
@@ -68,9 +62,6 @@ public class Article {
     private Boolean changesPublished = false;
 	@Builder.Default
 	private LeadMedia leadMedia = new LeadMedia();
-
-//    @Builder.Default
-//    private Temp temp = new Temp();
 
 }
 
