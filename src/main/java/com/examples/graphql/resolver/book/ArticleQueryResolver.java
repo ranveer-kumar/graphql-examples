@@ -18,7 +18,7 @@ public class ArticleQueryResolver implements GraphQLQueryResolver {
     @Autowired
     ArticleRepository bookRepository;
 
-    public Article getBookById(Long bookId) throws NotFoundException {
+    public Article getArticleById(Long bookId) throws NotFoundException {
         Optional<Article> articleOptional = bookRepository.findById(bookId);
         if (articleOptional.isPresent()) {
             return articleOptional.get();
