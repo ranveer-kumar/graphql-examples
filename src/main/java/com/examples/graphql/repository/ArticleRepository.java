@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 
 
-public interface BookRepository extends MongoRepository<Book, Long> {
+public interface ArticleRepository extends MongoRepository<Book, Long> {
 
 }

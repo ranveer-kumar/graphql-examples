@@ -1,12 +1,10 @@
 package com.examples.graphql.resolver.book;
 
 
-import com.examples.graphql.model.MetaData;
-import com.examples.graphql.model.Author;
 import com.examples.graphql.model.Book;
 import com.examples.graphql.model.BookInput;
-import com.examples.graphql.model.Temp;
-import com.examples.graphql.repository.BookRepository;
+import com.examples.graphql.repository.ArticleRepository;
+import com.examples.graphql.service.ArticleService;
 import com.examples.graphql.util.CommonUtils;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.extern.slf4j.Slf4j;
@@ -20,12 +18,12 @@ import java.security.SecureRandom;
 @Component
 @Slf4j
 public class BookMutationResolver implements GraphQLMutationResolver {
-//
-//    @Autowired
-//    ArticleService articleService;
+    //
+    @Autowired
+    ArticleService articleService;
 
     @Autowired
-    BookRepository bookRepository;
+    ArticleRepository bookRepository;
 
 
     public Book saveBook(@Valid BookInput bookInput) {
@@ -53,7 +51,7 @@ public class BookMutationResolver implements GraphQLMutationResolver {
 //                .build());
 
         log.info("start saving the article");
-        return bookRepository.save(book);
+        return articleService.saveArticle(book);
     }
 
 }
