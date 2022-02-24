@@ -23,7 +23,7 @@ public class ArticleQueryResolver implements GraphQLQueryResolver {
         if (articleOptional.isPresent()) {
             return articleOptional.get();
         }
-        throw new NotFoundException("Book not found for id: " + bookId);
+        throw new NotFoundException("Article not found for id: " + bookId);
     }
 
 

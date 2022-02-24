@@ -1,6 +1,6 @@
 scalar Date
 type Query {
-    getArticleById (bookId: ID!): Article
+    getArticleById (articleId: ID!): Article
 
 #    getArticleById (articleId: ID!): Article
 #    allArticles(page: Int, size: Int, sortBy: String = "createdDate", sortDirection: String = "DESC"): [Article]!
@@ -8,109 +8,11 @@ type Query {
 type Mutation{
 #    saveArticle(articleInput: ArticleInput!): Article!
 #    deleteArticle (articleId: Int! @NotBlank): Boolean
-    saveArticle(bookInput: ArticleInput!): Article!
+    saveArticle(articleInput: ArticleInput!): Article!
     #    updateArticle(articleInput: ArticleInput!): Article!
 
 }
-type Article{
-    id: Int
-    domainId: Int
-#    author: Author
-    title: String
 
-    headline: String
-    summary: String
-    articleType: String
-    createdBy: String
-    createdDate: String
-    lastModifiedBy: String
-    lastModifiedByUserName: String
-    lastModifiedDate: String
-    lastPublishedBy: String
-    lastPublishedByUserName: String
-    lastPublishedDate: String
-    firstPublishedDate: String
-    metaData: MetaData
-    scheduledDate: String
-    scheduledAt: String
-    scheduledBy: String
-    isDeleted: Boolean
-    readByUsers: [String]
-    expiryDate: String
-    expireAt: String
-    changesPublished: Boolean
-#        temp: Temp
-    leadMedia: LeadMedia
-}
-#type Temp{
-#    metaTitle: String
-#    metaDescription: String
-#    url: String
-##    authors: [String]
-##    authorEmail: String
-##    keywords: [String]
-##    section: String
-##    subSection: String
-##    sectionId: Int
-##    subSectionId: Int
-##    secondarySections: [String]
-##    topic: [String]
-##    canonicalUrl: String
-#}
-#type Author{
-#    name: String
-#    city: String
-#}
-
-input ArticleInput{
-    id: Int
-    domainId: Int
-#    author: AuthorInput
-    title: String
-    headline: String
-    summary: String
-    articleType: String
-    createdBy: String
-    createdDate: String
-    lastModifiedBy: String
-    lastModifiedByUserName: String
-    lastModifiedDate: String
-    lastPublishedBy: String
-    lastPublishedByUserName: String
-    lastPublishedDate: String
-    firstPublishedDate: String
-    metaData: MetaDataInput
-    scheduledDate: String
-    scheduledAt: String
-    scheduledBy: String
-    isDeleted: Boolean
-    readByUsers: [String]
-    expiryDate: String
-    expireAt: String
-    changesPublished: Boolean
-#    temp: TempInput
-    leadMedia: LeadMediaInput
-}
-
-#input TempInput{
-#    metaTitle: String
-#    metaDescription: String
-#    url: String
-##    authors: [String]
-##    authorEmail: String
-##    keywords: [String]
-##    section: String
-##    subSection: String
-##    sectionId: Int
-##    subSectionId: Int
-##    secondarySections: [String]
-##    topic: [String]
-##    canonicalUrl: String
-#}
-#input AuthorInput{
-#    name: String
-#    city: String
-#}
 
 
 
