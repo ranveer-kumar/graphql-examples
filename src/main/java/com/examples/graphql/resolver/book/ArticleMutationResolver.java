@@ -23,6 +23,35 @@ public class ArticleMutationResolver implements GraphQLMutationResolver {
 
 
 
+    public Article saveArticle(@Valid ArticleInput bookInput) {
+        Article book = new Article();
+//        log.info(articleInput.getMetaData().toString());
+        BeanUtils.copyProperties(bookInput, book);
+        book.setId((long) new SecureRandom().nextInt(100000));
+        book.getMetaData().setUrl(CommonUtils.urlGenerator(book.getTitle(), book.getId()));
+//        book.setDomainId(bookInput.getDomainId());
+//        book.setTitle(bookInput.getTitle());
+//        book.setMetaData(MetaData.builder()
+//                        .metaTitle(bookInput.getMetaData().getMetaTitle())
+//                        .authorEmail(bookInput.getMetaData().getAuthorEmail())
+//                        .url(bookInput.getMetaData().getUrl())
+//                        .canonicalUrl(bookInput.getMetaData().getCanonicalUrl())
+//                .build());
+//        book.setAuthor(Author.builder()
+//                        .name(bookInput.getAuthor().getName())
+//                        .city(bookInput.getAuthor().getCity())
+//                .build());
+//        book.setTemp(Temp.builder()
+//                        .metaTitle(bookInput.getTemp().getMetaTitle())
+//                        .metaDescription(bookInput.getTemp().getMetaDescription())
+//                        .url(bookInput.getTemp().getUrl())
+//                .build());
+
+        log.info("start saving the article");
+        return articleService.saveArticle(book);
+    }
+
+    @Deprecated
     public Article saveBook(@Valid ArticleInput bookInput) {
         Article book = new Article();
 //        log.info(articleInput.getMetaData().toString());
