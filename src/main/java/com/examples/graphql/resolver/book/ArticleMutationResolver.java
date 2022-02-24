@@ -3,8 +3,6 @@ package com.examples.graphql.resolver.book;
 
 import com.examples.graphql.model.Article;
 import com.examples.graphql.model.ArticleInput;
-import com.examples.graphql.model.Book;
-import com.examples.graphql.model.BookInput;
 import com.examples.graphql.service.ArticleService;
 import com.examples.graphql.util.CommonUtils;
 import graphql.kickstart.tools.GraphQLMutationResolver;
@@ -18,7 +16,7 @@ import java.security.SecureRandom;
 
 @Component
 @Slf4j
-public class BookMutationResolver implements GraphQLMutationResolver {
+public class ArticleMutationResolver implements GraphQLMutationResolver {
     //
     @Autowired
     ArticleService articleService;

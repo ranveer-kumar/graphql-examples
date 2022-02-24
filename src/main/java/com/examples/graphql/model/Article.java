@@ -28,7 +28,7 @@ public class Article {
     private Long id;
 //    @Min(value = 1, message = "Value should be greater then 0")
     private Integer domainId;
-    private Author author;
+//    private Author author;
     @NotEmpty
     private String title;
     @NotEmpty

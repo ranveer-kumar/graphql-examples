@@ -15,7 +15,7 @@ type Mutation{
 type Book{
     id: Int
     domainId: Int
-    author: Author
+#    author: Author
     title: String
 
     headline: String
@@ -57,15 +57,15 @@ type Temp{
 #    topic: [String]
 #    canonicalUrl: String
 }
-type Author{
-    name: String
-    city: String
-}
+#type Author{
+#    name: String
+#    city: String
+#}
 
 input BookInput{
     id: Int
     domainId: Int
-    author: AuthorInput
+#    author: AuthorInput
     title: String
     headline: String
     summary: String
@@ -107,10 +107,10 @@ input TempInput{
 #    topic: [String]
 #    canonicalUrl: String
 }
-input AuthorInput{
-    name: String
-    city: String
-}
+#input AuthorInput{
+#    name: String
+#    city: String
+#}
 
 
 

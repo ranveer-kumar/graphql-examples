@@ -3,7 +3,6 @@ package com.examples.graphql.resolver.book;
 
 import com.examples.graphql.exception.NotFoundException;
 import com.examples.graphql.model.Article;
-import com.examples.graphql.model.Book;
 import com.examples.graphql.repository.ArticleRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +13,7 @@ import java.util.Optional;
 
 @Component
 @Slf4j
-public class BookQueryResolver implements GraphQLQueryResolver {
+public class ArticleQueryResolver implements GraphQLQueryResolver {
 
     @Autowired
     ArticleRepository bookRepository;
